@@ -15,14 +15,18 @@ listaDeTeclas[1].onclick = tocaSomClap;
 //chamando a função tocaSomPom pela item "0" da listaDeTecla
 listaDeTeclas[0].onclick = tocaSom;
 
-let contador = 0;
-while(contador < listaDeTeclas.length){
-    const efeito = listcaDeTeclas[contador].classList[1];
-    const idAudio = "#som_"+efeito;
+
+for (let contador = 0;contador < listaDeTeclas.length;contador++){
+    const tecla = listaDeTeclas[contador];
+    const efeito = tecla.classList.classList[1];
+    const idAudio = `#som_${efeito}`;
+    tecla.onclick = function(){
+        tocaSom(idAudio);
+    }
     listaDeTeclas[contador].onclick = function(){
 
 
     };
-    contador = contador + 1;
-    console.log(contador);
+   
+    
 }
