@@ -16,10 +16,11 @@ for (let contador = 0;contador < listaDeTeclas.length;contador++){
     tecla.onclick = function(){
         tocaSom(idAudio);
     }
-    listaDeTeclas[contador].onclick = function(){
-
-
-    };
-   
-    
+    tecla.onkeydown = function(evento){
+        if(evento.code != 'Tab'){
+            tecla.classList.add('ativa');
+        }
+    }
+    tecla.classList.add('ativa');
+    }
 }
